@@ -85,4 +85,8 @@ begin
     select 'success: enrollment completed' as message;
 end //
 DELIMITER ;
+-- 5) Tiến hành gọi thủ tục trên với tham số tương ứng.
+call register_course('Nguyễn Văn An', 'Lập trình C');
+-- 6) Kiểm tra lại tiền của sinh viên sau khi đăng ký thành công
+select * from student_wallets;
 
